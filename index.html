@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internship Registration</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Internship Registration Form</h2>
+    <form id="internForm" action="insert.php" method="POST" enctype="multipart/form-data">
+
+      <input type="hidden" name="internship_code" value="INTN2025">
+
+      <label>Full Name:</label>
+      <input type="text" name="full_name" id="full_name" required>
+
+      <label>Create Password:</label>
+      <input type="password" name="password" required>
+
+      <label>Email Address:</label>
+      <input type="email" name="email" required>
+
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="Male" required> Male
+      <input type="radio" name="gender" value="Female" required> Female
+      <input type="radio" name="gender" value="Other" required> Other
+
+      <label>Year of Study:</label>
+      <input type="radio" name="year_of_study" value="1st" required>1st Year
+      <input type="radio" name="year_of_study" value="2nd" required>2nd Year
+      <input type="radio" name="year_of_study" value="3rd" required>3rd Year
+      <input type="radio" name="year_of_study" value="4th" required>4th Year
+
+      <label>Branch / Stream:</label>
+      <select name="branch" required>
+        <option>CSE</option>
+        <option>ECE</option>
+        <option>EEE</option>
+        <option>ME</option>
+        <option>CE</option>
+      </select>
+
+      <label>Degree / Course:</label>
+      <select name="degree_course" required>
+        <option>B.Tech</option>
+        <option>BCA</option>
+        <option>MCA</option>
+        <option>M.Tech</option>
+      </select>
+
+      <label>College Name:</label>
+      <input type="text" name="college" required>
+
+      <label>Duration:</label>
+      <input type="checkbox" name="duration[]" value="1 Month" >1 Month
+      <input type="checkbox" name="duration[]" value="2 Months">2 Months
+      <input type="checkbox" name="duration[]" value="3 Months" >3 Months
+
+      <label>Address:</label>
+      <textarea name="address" required></textarea>
+
+      <label>Contact Number:</label>
+      <input type="tel" name="contact" id="contact" required>
+
+      <label>LinkedIn Profile:</label>
+      <input type="url" name="linkedin" required>
+
+      <label>Internship Domain:</label>
+      <input type="search" name="search_domain" placeholder="e.g., Web Development" required>
+
+      <label>Upload Profile Image:</label>
+      <input type="file" name="image" accept="image/*" required>
+
+      <label>Upload Resume:</label>
+      <input type="file" name="resume" accept=".pdf,.docx" required>
+
+      <label>Date of Birth:</label>
+      <input type="date" name="dob" required>
+
+      <label>Preferred Interview Time:</label>
+      <input type="time" name="preferred_time" required>
+
+      <label>Submission Date & Time:</label>
+      <input type="datetime-local" name="submission_datetime" required>
+
+      <label>Internship Start Month:</label>
+      <input type="month" name="start_month"  required>
+
+      <label>Preferred Internship Week:</label>
+      <input type="week" name="preferred_week" required>
+
+      <label>Choose ID Card Color:</label>
+      <input type="color" name="idcard_color"required>
+
+      <label>Internship Mode:</label>
+      <input type="radio" name="internship_mode" value="Online" required>Online
+      <input type="radio" name="internship_mode" value="Offline" required>Offline
+      <input type="radio" name="internship_mode" value="Hybrid" required>Hybrid
+
+      <label>Areas of Interest:</label>
+      <input type="checkbox" name="areas_of_interest[]" value="Web Development" >Web Development
+      <input type="checkbox" name="areas_of_interest[]" value="AI/ML" >AI/ML
+      <input type="checkbox" name="areas_of_interest[]" value="Cyber Security">Cyber Security
+
+      <label>Skill Level (Range):</label>
+      <input type="range" name="skill_level" min="0" max="10">
+
+      <label>Why do you want this internship?</label>
+      <textarea name="why_intern"></textarea>
+
+      <div class="buttons">
+        <input type="submit" value="Submit Application">
+        <input type="reset" value="Reset Form">
+  <a href="display.php" target="_blank" class="view-btn">View Applications</a>
+
+      </div>
+    </form>
+
+  </div>
+</body>
+</html>

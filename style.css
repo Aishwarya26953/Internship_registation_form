@@ -1,0 +1,141 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #eef3f8;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+input[type=radio], 
+input[type=checkbox], 
+input[type=color], 
+input[type=range] {
+  width: auto;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center; /* ✅ keeps buttons aligned nicely */
+}
+
+input[type=submit], 
+input[type=reset], 
+input[type=button] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+input[type=submit] { background: #28a745; color: white; }
+input[type=reset] { background: #dc3545; color: white; }
+input[type=button] { background: #007bff; color: white; }
+
+#displayArea {
+  margin-top: 40px;
+}
+
+/* Popup styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  text-align: left;
+  position: relative;
+}
+
+.popup-content h3 {
+  margin-top: 0;
+}
+
+#closePopup {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+}
+
+/* ✅ View Applications Button */
+.view-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #17a2b8;
+  color: #fff !important;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  text-align: center;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.view-btn:hover {
+  background-color: #117a8b;
+  text-decoration: none;
+}
+
+/* ✅ Responsive design */
+@media (max-width: 600px) {
+  input, select, textarea {
+    font-size: 14px;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  .view-btn {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}
